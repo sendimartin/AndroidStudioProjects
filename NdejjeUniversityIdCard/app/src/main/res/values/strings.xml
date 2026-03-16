@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NdejjeUniversityIdCard</string>
+
+    //student details
+    <string name="student_name">Sendi Martin</string>
+    <string name="programme">Bachelor of Science in Computer Science</string>
+    <string name="reg_number">24/2/306/D/127</string>
+    <string name="date_of_issue">14/3/2026</string>
+    <string name="expiry_date">14/3/2029</string>
+</resources>

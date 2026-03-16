@@ -1,0 +1,27 @@
+com.example.ndejjewelcome
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable female_1
+drawable female_2
+drawable female_3
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable jamix
+drawable male_1
+drawable male_2
+drawable ndejje_log
+drawable stud_photo
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string programe
+string reg_number
+string student_name
+style Theme_NdejjeWelcome
+xml backup_rules
+xml data_extraction_rules
