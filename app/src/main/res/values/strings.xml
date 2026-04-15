@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="search_placeholder">Search student name...</string>
+
+    <string name="app_name">NdejjeWelcomeApp</string>
+
+
+
+    <!-- Student details — edit these with your own information -->
+
+    <string name="student_name">Sendi Martin</string>
+
+    <string name="programme">Bachelor of Science in Computer Science</string>
+
+    <string name="reg_number">24/2/306/D/127</string>
+
+</resources>
