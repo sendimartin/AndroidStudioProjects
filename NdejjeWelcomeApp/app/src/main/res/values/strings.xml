@@ -1,5 +1,7 @@
 <resources>
 
+    <string name="search_placeholder">Search student name...</string>
+
     <string name="app_name">NdejjeWelcomeApp</string>
 
 
