@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -23,22 +22,25 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.ndejje.momocalc.ui.theme.MoMoCalculatorAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
-            MaterialTheme {
-                Surface { MoMoCalcScreen() }
+            MaterialTheme(typography = MoMoTypography) {
+                Surface(modifier = Modifier.fillMaxSize()) {
+                    MoMoCalcScreen()
+                }
             }
         }
     }
 }
+
 @Composable
 fun HoistedAmountInput(
-    amount: String,    // State flows IN
-    onAmountChange: (String) -> Unit,  //Events flow OUT
+    amount: String,
+    onAmountChange: (String) -> Unit,
     isError: Boolean = false
 ) {
     Column {
@@ -91,5 +93,7 @@ fun MoMoCalcScreen() {
 @Preview(showBackground = true)
 @Composable
 fun MoMoCalcPreview() {
-    MaterialTheme { MoMoCalcScreen() }
+    MaterialTheme(typography = MoMoTypography) {
+        MoMoCalcScreen()
+    }
 }
