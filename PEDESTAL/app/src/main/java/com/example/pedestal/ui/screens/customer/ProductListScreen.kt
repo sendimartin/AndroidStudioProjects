@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -17,7 +18,8 @@ import com.example.pedestal.data.Product
 fun ProductListScreen(
     products: List<Product>,
     onProductClick: (Product) -> Unit,
-    onNavigateToCart: () -> Unit
+    onNavigateToCart: () -> Unit,
+    onLogout: () -> Unit
 ) {
     var searchQuery by remember { mutableStateOf("") }
     
@@ -34,6 +36,9 @@ fun ProductListScreen(
                     actions = {
                         TextButton(onClick = onNavigateToCart) {
                             Text("Cart")
+                        }
+                        IconButton(onClick = onLogout) {
+                            Icon(Icons.AutoMirrored.Filled.ExitToApp, contentDescription = "Logout")
                         }
                     }
                 )

@@ -96,6 +96,12 @@ fun SetupNavGraph(
                 },
                 onNavigateToCart = {
                     navController.navigate(Screen.Cart.route)
+                },
+                onLogout = {
+                    viewModel.logout()
+                    navController.navigate(Screen.Login.route) {
+                        popUpTo(0) { inclusive = true }
+                    }
                 }
             )
         }
@@ -151,6 +157,12 @@ fun SetupNavGraph(
                 },
                 onDeleteProductClick = { product ->
                     viewModel.deleteProduct(product.id)
+                },
+                onLogout = {
+                    viewModel.logout()
+                    navController.navigate(Screen.Login.route) {
+                        popUpTo(0) { inclusive = true }
+                    }
                 }
             )
         }
@@ -182,7 +194,13 @@ fun SetupNavGraph(
             AdminDashboardScreen(
                 onManageUsersClick = { navController.navigate(Screen.ManageUsers.route) },
                 onManageProductsClick = { navController.navigate(Screen.ManageProducts.route) },
-                onManageOrdersClick = { navController.navigate(Screen.ManageOrders.route) }
+                onManageOrdersClick = { navController.navigate(Screen.ManageOrders.route) },
+                onLogout = {
+                    viewModel.logout()
+                    navController.navigate(Screen.Login.route) {
+                        popUpTo(0) { inclusive = true }
+                    }
+                }
             )
         }
         composable(route = Screen.ManageUsers.route) {

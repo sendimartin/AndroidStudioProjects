@@ -1,6 +1,8 @@
 package com.example.pedestal.ui.screens.admin
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,11 +13,19 @@ import androidx.compose.ui.unit.dp
 fun AdminDashboardScreen(
     onManageUsersClick: () -> Unit,
     onManageProductsClick: () -> Unit,
-    onManageOrdersClick: () -> Unit
+    onManageOrdersClick: () -> Unit,
+    onLogout: () -> Unit
 ) {
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text("Admin Dashboard") })
+            TopAppBar(
+                title = { Text("Admin Dashboard") },
+                actions = {
+                    IconButton(onClick = onLogout) {
+                        Icon(Icons.AutoMirrored.Filled.ExitToApp, contentDescription = "Logout")
+                    }
+                }
+            )
         }
     ) { padding ->
         Column(
